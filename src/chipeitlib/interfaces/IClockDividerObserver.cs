@@ -16,9 +16,10 @@ namespace Chipeit.Lib.Interfaces
     public interface IClockDividerObserver
     {
         /// <summary>
-        /// Event triggered when the <see cref="IClockDivider"/> triggers a
-        /// step.
+        /// Event handler triggered when the <see cref="IClockDivider"/> to 
+        /// which this observer is subscribed triggers the <see cref="IClockDivider.Step"/>
+        /// event.
         /// </summary>
-        event EventHandler ClockDividerStep;
+        void ClockDividerStep(object sender, EventArgs e);
     }
 }

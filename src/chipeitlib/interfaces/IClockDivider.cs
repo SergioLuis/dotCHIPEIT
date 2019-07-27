@@ -23,6 +23,12 @@ namespace Chipeit.Lib.Interfaces
         long MsLeft { get; }
 
         /// <summary>
+        /// Event triggered when this <see cref="IClockDivider"/> finishes a
+        /// step.
+        /// </summary>
+        event EventHandler Step;
+
+        /// <summary>
         /// Adds a <see cref="IClockDividerObserver"/> to be notified on each step.
         /// </summary>
         /// <param name="observer">
