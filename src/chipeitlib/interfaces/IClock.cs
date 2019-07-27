@@ -30,17 +30,17 @@ namespace Chipeit.Lib.Interfaces
         /// this property as actual, real-world milliseconds (specially when
         /// converting them back and forth between other units, such as hertz).
         /// </remarks>
-        long Millis { get; }
+        long Ms { get; }
 
         /// <summary>
-        /// Updates the current time frame represented by <see cref="Millis"/>.
+        /// Updates the current time frame represented by <see cref="Ms"/>.
         /// </summary>
         /// <returns>
         /// A reference to this <see cref="IClock"/> object, for method chaining
         /// if necessary.
         /// </returns>
         /// <remarks>
-        /// After calling this method, reading the <see cref="Millis"/> property
+        /// After calling this method, reading the <see cref="Ms"/> property
         /// must return a value equal to, or greater than it was before calling
         /// this method.
         /// Doc Brown knew how to travel back in time - this emulator might not

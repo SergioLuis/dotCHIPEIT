@@ -11,14 +11,14 @@ namespace Chipeit.Lib.Core
     /// </summary>
     public class Clock : IClock
     {
-        long IClock.Millis => mMillis;
+        long IClock.Ms => mMs;
 
         IClock IClock.Update()
         {
-            mMillis = DateTime.UtcNow.TotalMillis();
+            mMs = DateTime.UtcNow.TotalMillis();
             return this;
         }
 
-        long mMillis;
+        long mMs;
     }
 }

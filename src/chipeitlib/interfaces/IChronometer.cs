@@ -20,7 +20,7 @@ namespace Chipeit.Lib.Interfaces
 
         /// <summary>
         /// Starts the chronometer. While the chronometer is running, it will
-        /// update its <see cref="IClock.Millis"/> property. While the
+        /// update its <see cref="IClock.Ms"/> property. While the
         /// <see cref="IChronometer"/> instance is started, the <see cref="IsRunning"/>
         /// property will be <code>true</code>
         /// </summary>
@@ -28,7 +28,7 @@ namespace Chipeit.Lib.Interfaces
 
         /// <summary>
         /// Stops the chronometer. While the chronometer is stopped, it will
-        /// not update its <see cref="IClock.Millis"/> property. While the
+        /// not update its <see cref="IClock.Ms"/> property. While the
         /// <see cref="IChronometer"/> instance is stopped, the <see cref="IsRunning"/>
         /// property will be <code>false</code>.
         /// </summary>

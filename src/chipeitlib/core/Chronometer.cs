@@ -23,7 +23,7 @@ namespace Chipeit.Lib.Core
 
         bool IChronometer.IsRunning => mbIsRunning;
 
-        long IClock.Millis => mClockMillis - mIdleTime;
+        long IClock.Ms => mClockMillis - mIdleTime;
 
         void IChronometer.Start()
         {
@@ -33,7 +33,7 @@ namespace Chipeit.Lib.Core
                     return;
 
                 mClock.Update();
-                mIdleTime += mClock.Millis - mLastStop;
+                mIdleTime += mClock.Ms - mLastStop;
                 mbIsRunning = true; 
             }
         }
@@ -46,7 +46,7 @@ namespace Chipeit.Lib.Core
                     return;
 
                 mbIsRunning = false;
-                mLastStop = mClock.Millis;
+                mLastStop = mClock.Ms;
             }
         }
 
@@ -61,7 +61,7 @@ namespace Chipeit.Lib.Core
                             LibLocalization.Keys.ChronometerNotRunningException));
                 }
 
-                mClockMillis = mClock.Update().Millis;
+                mClockMillis = mClock.Update().Ms;
                 return this;
             }
         }
