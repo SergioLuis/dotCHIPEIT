@@ -20,6 +20,8 @@ namespace Chipeit.Lib.Interfaces
         /// which this observer is subscribed triggers the <see cref="IClockDivider.Step"/>
         /// event.
         /// </summary>
+        /// <paramref name="sender">Sender of the event.</paramref>
+        /// <paramref name="e">Arguments of the event</paramref>
         void ClockDividerStep(object sender, EventArgs e);
     }
 }
