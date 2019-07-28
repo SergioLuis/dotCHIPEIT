@@ -9,7 +9,8 @@ namespace Chipeit.Lib
         public enum Keys
         {
             ChronometerNotRunningException,
-            InvalidMsPerStepArgumentException
+            InvalidMsPerStepArgumentException,
+            InvalidRegistersMemorySize
         }
 
         static class Values
@@ -18,6 +19,8 @@ namespace Chipeit.Lib
                 "The IChronometer cannot be updated if it is not running.";
             internal const string InvalidMsPerStepArgumentException =
                 "The IClockDivider.MsPerStep must be greater than zero. Value used: '{0}'.";
+            internal const string InvalidRegistersMemorySize =
+                "The IMemory<byte> must be of length {0}. It was {1} instead.";
         }
 
         public static void Initialize()
@@ -70,6 +73,9 @@ namespace Chipeit.Lib
             dict.Add(
                 Keys.InvalidMsPerStepArgumentException,
                 Values.InvalidMsPerStepArgumentException);
+            dict.Add(
+                Keys.InvalidRegistersMemorySize,
+                Values.InvalidRegistersMemorySize);
         }
 
         static readonly object mInitializationLock;
