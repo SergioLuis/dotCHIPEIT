@@ -78,7 +78,7 @@ namespace Chipeit.Lib
                 Values.InvalidRegistersMemorySize);
         }
 
-        static readonly object mInitializationLock;
+        static readonly object mInitializationLock = new object();
 
         readonly Dictionary<Keys, string> mStrings;
     }
