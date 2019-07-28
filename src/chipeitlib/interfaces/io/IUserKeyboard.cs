@@ -1,4 +1,4 @@
-﻿namespace Chipeit.Lib.Interfaces
+﻿namespace Chipeit.Lib.Interfaces.IO
 {
     /// <summary>
     /// Represents the keyboard the user has access to, along with the two
