@@ -4,13 +4,13 @@ namespace Chipeit.Lib.Core
 {
     public struct Memory<T> : IMemory<T>
     {
-        T IMemory<T>.this[ulong address]
+        T IMemory<T>.this[int address]
         {
             get => mContent[address];
             set => mContent[address] = value;
         }
 
-        ulong IMemory<T>.Size => (ulong)mContent.LongLength;
+        int IMemory<T>.Size => mContent.Length;
 
         public Memory(ulong size)
         {

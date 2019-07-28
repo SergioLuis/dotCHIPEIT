@@ -9,7 +9,7 @@ namespace Chipeit.Lib.Interfaces
         /// <summary>
         /// Size of the memory.
         /// </summary>
-        ulong Size { get; }
+        int Size { get; }
 
         /// <summary>
         /// Reads from, or writes to this <see cref="IMemory{T}"/> at the
@@ -17,6 +17,6 @@ namespace Chipeit.Lib.Interfaces
         /// </summary>
         /// <param name="address"></param>
         /// <returns></returns>
-        T this[ulong address] { get; set; }
+        T this[int address] { get; set; }
     }
 }
