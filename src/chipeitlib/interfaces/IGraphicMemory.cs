@@ -5,8 +5,10 @@ namespace Chipeit.Lib.Interfaces
     /// <summary>
     /// Represents the graphic memory of a Chip-8 emulator. This is, the matrix
     /// of pixels that will be painted on the screen.
+    /// On a basic Chip-8 emulator, <see cref="T"/> should be <see cref="bool"/>,
+    /// but on Chip-8 extensions with colors it can be of <see cref="byte"/>.
     /// </summary>
-    public interface IGraphicMemory
+    public interface IGraphicMemory<T>
     {
         /// <summary>
         /// Event triggered when this <see cref="IGraphicMemory"/> is dirty
@@ -28,7 +30,7 @@ namespace Chipeit.Lib.Interfaces
         /// <param name="col">Column of the pixel to access.</param>
         /// <param name="row">Row of the pixel to access.</param>
         /// <returns></returns>
-        bool Get(int col, int row);
+        T Get(int col, int row);
 
         /// <summary>
         /// Draws a row of pixels (up to 8) starting in a given position.
