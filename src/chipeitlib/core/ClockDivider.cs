@@ -31,6 +31,18 @@ namespace Chipeit.Lib.Core
 
         long IClockDivider.MsLeft => (mLastMs + mMsPerStep) - mClock.Ms;
 
+        /// <summary>
+        /// Creates a new <see cref="ClockDivider"/> instance.
+        /// </summary>
+        /// <param name="clock">
+        /// Clock used to measure when this <see cref="ClockDivider"/> should
+        /// trigger the next <see cref="IClockDivider.Step"/> event. It is
+        /// recommended that you use a <see cref="Chronometer"/> as the clock,
+        /// as it can be paused and resumed.
+        /// </param>
+        /// <param name="msPerStep">
+        /// Milliseconds between each <see cref="IClockDivider.Step"/> event.
+        /// </param>
         public ClockDivider(IClock clock, long msPerStep)
         {
             CheckValidMsPerStep(msPerStep, "msPerStep");

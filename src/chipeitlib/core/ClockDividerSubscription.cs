@@ -4,6 +4,12 @@ using Chipeit.Lib.Interfaces;
 
 namespace Chipeit.Lib.Core
 {
+    /// <summary>
+    /// Represents the subscription of a <see cref="IClockDividerObserver"/> to
+    /// a <see cref="IClockDivider"/>.
+    /// Disposing this subscription will cause the subscriber to cease receiving
+    /// events from the subscribee.
+    /// </summary>
     internal class ClockDividerSubscription : IDisposable
     {
         internal ClockDividerSubscription(
