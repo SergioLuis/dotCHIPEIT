@@ -10,7 +10,8 @@ namespace Chipeit.Lib
         {
             ChronometerNotRunningException,
             InvalidMsPerStepArgumentException,
-            InvalidRegistersMemorySize
+            InvalidRegistersMemorySize,
+            InvalidGraphicMemorySize
         }
 
         static class Values
@@ -21,6 +22,8 @@ namespace Chipeit.Lib
                 "The IClockDivider.MsPerStep must be greater than zero. Value used: '{0}'.";
             internal const string InvalidRegistersMemorySize =
                 "The IMemory<byte> must be of length {0}. It was {1} instead.";
+            internal const string InvalidGraphicMemorySize =
+                "A Graphic Memory of size {0}x{1} needs a base memory of size at least {2}. Found {3} instead.";
         }
 
         public static void Initialize()
@@ -76,6 +79,9 @@ namespace Chipeit.Lib
             dict.Add(
                 Keys.InvalidRegistersMemorySize,
                 Values.InvalidRegistersMemorySize);
+            dict.Add(
+                Keys.InvalidGraphicMemorySize,
+                Values.InvalidGraphicMemorySize);
         }
 
         static readonly object mInitializationLock = new object();
