@@ -25,7 +25,7 @@ namespace Chipeit.Lib.Interfaces
         /// human being, but this property might not actually represent
         /// milliseconds in the same way humans _perceive_ them.
         /// Implementations of this class might account for milliseconds way
-        /// lower or faster than your average wrist clock.
+        /// slower or faster than your average wrist clock.
         /// However, even if you encounter such inaccuracies, you should treat
         /// this property as actual, real-world milliseconds (specially when
         /// converting them back and forth between other units, such as hertz).
